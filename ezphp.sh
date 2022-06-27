@@ -65,7 +65,7 @@ case $1 in
 		install_composer
 		;;
 	-d|--database)
-		insatall_rdbms
+		install_rdbms
 		;;
 		
 
