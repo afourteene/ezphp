@@ -37,7 +37,6 @@ function install_rdbms()
 	apt install $(echo $rdbms)
 	systemctl start mariadb.service
 	mysql_secure_installation
-	apt install mysql-workbench-community
 }
 
 function ezhelp()
@@ -46,7 +45,7 @@ function ezhelp()
 	echo "-i|--install	install php packages and composer"
 	echo "-c|--composer	install composer"
 	echo "-d|--database	install in default mode mariadb"	
-	echo "-h|--help	show help about ezphp"
+	echo "-h|--help	        show help about ezphp"
 
 }
 
