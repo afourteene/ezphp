@@ -1,12 +1,13 @@
 #! /bin/bash
 
-php_packages="php libapache2-mod-php php-mbstring php-xmlrpc php-soap php-gd php-xml php-cli php-zip php-bcmath php-tokenizer php-json php-pear"
+php_packages="php8.0-cli php8.0-fpm php8.0-curl php8.0-mbstring php8.0-xml php8.0-zip php8.0-gd php8.0-pdo php8.0-mysql"
 rdbms="mariadb-server"
 
 
 
 function install_php()
 {
+ sudo add-apt-repository ppa:ondrej/php	
  apt install $php_packages && install_composer
  
 
