@@ -1,6 +1,6 @@
 #! /bin/bash
 
-php_packages="php8.0-cli php8.0-fpm php8.0-curl php8.0-mbstring php8.0-xml php8.0-zip php8.0-gd php8.0-pdo php8.0-mysql"
+php_packages="php-cli php-fpm php-curl php-mbstring php-xml php-zip php-gd php-mysql"
 rdbms="mariadb-server"
 
 
@@ -9,8 +9,6 @@ function install_php()
 {
  sudo add-apt-repository ppa:ondrej/php	
  apt install $php_packages && install_composer
- 
-
 }
 
 function install_composer()
@@ -45,7 +43,8 @@ function ezhelp()
 	echo "option	describtion"
 	echo "-i|--install	install php packages and composer"
 	echo "-c|--composer	install composer"
-	echo "-d|--database	install in default mode mariadb"	
+	echo "-d|--database	install in default mode mariadb"
+	echo "-l|--laravel	install laravel - use example-app as default"	
 	echo "-h|--help	        show help about ezphp"
 
 }
@@ -68,7 +67,6 @@ case $1 in
 		install_rdbms
 		;;
 		
-
 esac
 
 
